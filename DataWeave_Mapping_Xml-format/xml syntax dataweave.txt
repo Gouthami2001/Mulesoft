@@ -1,0 +1,13 @@
+ns1#UserID: "SSN",
+
+ns1#EventId: payload.FindEventResponse.Result.EventId,
+
+ns3#startTime: now() >> "PST", 
+
+ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+
+ns3#value: if((payload.FindEventResponse.Result.EventText splitBy "Fail Reason: ")[1] == "Meter power fail") "2.0" 
+else if ((payload.FindEventResponse.Result.EventText splitBy " Fail Reason: ")[2] == "Partial voltage condition detected") 
+"1.0" else "0.0", 
+
+ns3#value: payload.FindEventResponse.Result.EventText  splitBy "," filter($ contains "Reboot Count:") map ($ splitBy ":")[1],

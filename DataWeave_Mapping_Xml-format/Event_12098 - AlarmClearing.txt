@@ -1,0 +1,192 @@
+******************************************************************INPUT****************************************************************
+<FindEventResponse xmlns:ns2="urn:com:ssn:schema:service:v2.1:DeviceTypes.xsd" xmlns="urn:com:ssn:schema:service:v2.1:EventManager.xsd" xmlns:ns4="urn:com:ssn:schema:service:v2.1:BasicTypes.xsd" xmlns:ns3="urn:com:ssn:schema:service:v2.1:CommonEnumerations.xsd" ErrorsOccurred="false" RowCount="0" SearchKey="0">
+<Result>
+<EventLogId>2-94395835</EventLogId>
+<EventId>12098</EventId>
+<EventName>Successful Communication Alarm Clearing Event</EventName>
+<EventDesc>Causes all alarms that should be auto-cleared by successful comms to be cleared</EventDesc>
+<EventTime>
+<Date>2018-06-12T15:53:33.052-07:00</Date>
+<LocalizedDate>Jun 12, 2018 3:53:33 PM PDT</LocalizedDate>
+</EventTime>
+<SourceId>00:13:50:02:00:94:1a:aa</SourceId>
+<SourceName>1005838244</SourceName>
+<SourceDeviceType>
+<ns2:Name>DID_SUBTYPE_LG_AXSD_HAN</ns2:Name>
+<ns2:LocalizedValue>L+G AX-SD HAN</ns2:LocalizedValue>
+</SourceDeviceType>
+<SourceUIQState>
+<Name>UIQ_DEVICE_STATE_ACTIVE</Name>
+<LocalizedValue>Active</LocalizedValue>
+</SourceUIQState>
+<SourceUtilState>
+<ns3:Name>UTL_DEVICE_STATE_ACTIVE</ns3:Name>
+<ns3:LocalizedValue>Active</ns3:LocalizedValue>
+</SourceUtilState>
+<SourceUtilID>1005838244</SourceUtilID>
+<SourceType>
+<Name>EVENT_SRC_TYPE_NETWORK_DEVICE</Name>
+<LocalizedValue>Network Device</LocalizedValue>
+</SourceType>
+<ProxyDeviceType>
+<ns2:Name>DID_SUBTYPE_LG_AXSD_HAN</ns2:Name>
+<ns2:LocalizedValue>L+G AX-SD HAN</ns2:LocalizedValue>
+</ProxyDeviceType>
+<ProxyUtilID>1005838244</ProxyUtilID>
+<EmitterId>00:13:50:02:00:94:1a:aa</EmitterId>
+<EmitterType>
+<Name>EVENT_SRC_TYPE_ALARMS_MANAGER</Name>
+<LocalizedValue>Alarms Manager</LocalizedValue>
+</EmitterType>
+<EventText>Successful communication occurred with the device 00:13:50:02:00:94:1a:aa, triggering all alarms that should be cleared by successful comms to be auto cleared</EventText>
+<Severity>
+<Name>EVENT_SEVERITY_CLEAR</Name>
+<LocalizedValue>Clear</LocalizedValue>
+</Severity>
+<NumOfDaysToKeep>14</NumOfDaysToKeep>
+<JobId>133782</JobId>
+<Ack>
+<Name>EVENT_UNRESOLVED</Name>
+<LocalizedValue>Unresolved</LocalizedValue>
+</Ack>
+<LocationDetails>
+<LocationId>2270179</LocationId>
+<UtilPremiseId>2300842661</UtilPremiseId>
+<LocationType>
+<ns2:Name>LOCATION_TYPE_PREMISE</ns2:Name>
+<ns2:LocalizedValue>Premise</ns2:LocalizedValue>
+</LocationType>
+<RegionCode>BJ</RegionCode>
+<Address1>2 T5SU EGI</Address1>
+<Address2>advanced wire down 60g test</Address2>
+<City>SFO</City>
+<State>CA</State>
+<PostalCode>95603</PostalCode>
+<CountryId>840</CountryId>
+<LocationRouteId>BBJR3SM</LocationRouteId>
+<ServicePointId>2110115</ServicePointId>
+<UtilServicePointId>2305876819</UtilServicePointId>
+<AccountId>0</AccountId>
+<Longitude>0.0</Longitude>
+<Latitude>0.0</Latitude>
+<SpLongitude>0.0</SpLongitude>
+<SpLatitude>0.0</SpLatitude>
+<ServicePointType>E</ServicePointType>
+</LocationDetails>
+</Result>
+</FindEventResponse>
+***********************************************************************OUTOUT*********************************************************
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:Message xmlns:ns0="com:ecologicanalytics:UnifiedMessageModel:EndDeviceEventsMessage">
+  <ns1:MessageHeader xmlns:ns1="com:ecologicanalytics:UnifiedMessageModel:OutageMessage">
+    <ns1:Verb>CREATED</ns1:Verb>
+    <ns1:Noun>EndDeviceEvents</ns1:Noun>
+    <ns1:Revision>1.0</ns1:Revision>
+    <ns1:Source>SSN</ns1:Source>
+    <ns1:UserID>SSN</ns1:UserID>
+    <ns1:EventId>12098</ns1:EventId>
+    <ns1:EventLogId>2-94395835</ns1:EventLogId>
+  </ns1:MessageHeader>
+  <ns0:MessagePayload>
+    <ns2:EndDeviceEvents xmlns:ns2="com:ecologicanalytics:UnifiedMessageModel:EndDeviceEvents">
+      <ns3:EndDeviceEvent xmlns:ns3="http://iec.ch/TC57/2007/profile#">
+        <ns3:MeterReading>
+          <ns3:endTime> </ns3:endTime>
+          <ns3:startTime>2024-06-27T02:18:47.152-07:00</ns3:startTime>
+          <ns3:Readings>
+            <ns3:timeStamp>2018-06-12T15:53:33.052-07:00</ns3:timeStamp>
+            <ns3:value>0.0</ns3:value>
+            <ns3:ReadingQualities>
+              <ns3:quality>Confirmed</ns3:quality>
+            </ns3:ReadingQualities>
+            <ns3:ReadingTypes>
+              <ns3:measTypeCategory>Status</ns3:measTypeCategory>
+              <ns3:name>Energization</ns3:name>
+            </ns3:ReadingTypes>
+          </ns3:Readings>
+          <ns3:Readings>
+            <ns3:timeStamp>2018-06-12T15:53:33.052-07:00</ns3:timeStamp>
+            <ns3:value/>
+            <ns3:ReadingTypes>
+              <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+              <ns3:name>SequenceId</ns3:name>
+            </ns3:ReadingTypes>
+          </ns3:Readings>
+          <ns3:ServiceDeliveryPoint>
+            <ns3:aliasName>1005838244</ns3:aliasName>
+            <ns3:name>2305876819</ns3:name>
+          </ns3:ServiceDeliveryPoint>
+        </ns3:MeterReading>
+      </ns3:EndDeviceEvent>
+    </ns2:EndDeviceEvents>
+  </ns0:MessagePayload>
+</ns0:Message>
+*************************************************************************DATAWEAVE SCRIPT*************************************************
+
+%dw 2.0
+output application/xml
+ns ns0 com:ecologicanalytics:UnifiedMessageModel:EndDeviceEventsMessage
+ns ns1 com:ecologicanalytics:UnifiedMessageModel:OutageMessage
+ns ns2 com:ecologicanalytics:UnifiedMessageModel:EndDeviceEvents
+ns ns3 http://iec.ch/TC57/2007/profile#
+---
+{
+  ns0#Message: {
+    ns1#MessageHeader: {
+      ns1#Verb: "CREATED",
+      ns1#Noun: "EndDeviceEvents",
+      ns1#Revision: "1.0",
+      ns1#Source: "SSN",
+      ns1#UserID: "SSN",
+      ns1#EventId: payload.FindEventResponse.Result.EventId,
+      ns1#EventLogId:payload.FindEventResponse.Result.EventLogId
+    },
+    ns0#MessagePayload: {
+      ns2#EndDeviceEvents: {
+        ns3#EndDeviceEvent: {
+          ns3#MeterReading: {
+            ns3#endTime:" ",
+            ns3#startTime: now() >> "PST",
+            ns3#Readings: [
+            {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: if((payload.FindEventResponse.Result.EventText splitBy "Fail Reason: ")[1] == "Meter power fail") "2.0" else if ((payload.FindEventResponse.Result.EventText splitBy " Fail Reason: ")[2] == "Partial voltage condition detected") "1.0" else "0.0",
+                ns3#ReadingQualities: {
+                  ns3#quality: "Confirmed"
+                },
+                  ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Status",
+                  ns3#name: "Energization"
+                }
+              },
+              {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,           
+                ns3#value: payload.FindEventResponse.Result.EventText  splitBy "," filter($ contains "Reboot Count:") map ($ splitBy ":")[1],
+                ns3#ReadingTypes: {
+                  
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "SequenceId"
+                }
+              },
+            ],
+            ns3#ServiceDeliveryPoint: {
+              ns3#aliasName: payload.FindEventResponse.Result.SourceName,
+              ns3#name: payload.FindEventResponse.Result.LocationDetails.UtilServicePointId,
+       
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+    
+    
+	
+
+
+
+
+

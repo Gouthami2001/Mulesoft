@@ -1,0 +1,299 @@
+****************************************************************************INPUT***************************************************
+<?xml version="1.0" encoding="UTF-8"?><FindEventResponse xmlns="urn:com:ssn:schema:service:v2.8.1:EventManager.xsd" xmlns:ns2="urn:com:ssn:schema:service:v2.8.1:DeviceTypes.xsd" xmlns:ns3="urn:com:ssn:schema:service:v2.8.1:CommonEnumerations.xsd" xmlns:ns4="urn:com:ssn:schema:service:v2.8.1:BasicTypes.xsd" ErrorsOccurred="false" RowCount="0" SearchKey="0">
+    <Result>
+        <EventLogId>1-122155811</EventLogId>
+        <EventId>300274</EventId>
+        <EventName>Partial Voltage Condition Set for 3 Phase meter</EventName>
+        <EventCode>PVA_3P_SET_TRAP</EventCode>
+        <EventDesc>Partial voltage condition detected for 3 Phase meter.</EventDesc>
+        <EventTime>
+            <Date>2023-09-29T16:05:22.000-07:00</Date>
+            <LocalizedDate>Sep 29, 2023 4:05:22 PM PDT</LocalizedDate>
+        </EventTime>
+        <SourceId>00:16:16:1f:00:00:00:19</SourceId>
+        <SourceName>0016161f00000019</SourceName>
+        <SourceDeviceType>
+            <ns2:Name>DID_SUBTYPE_I210RD</ns2:Name>
+            <ns2:LocalizedValue>I-210-RD</ns2:LocalizedValue>
+        </SourceDeviceType>
+        <SourceSubstationUtilID>4</SourceSubstationUtilID>
+        <SourceUIQState>
+            <Name>UIQ_DEVICE_STATE_ACTIVE</Name>
+            <LocalizedValue>Active</LocalizedValue>
+        </SourceUIQState>
+        <SourceUtilState>
+            <ns3:Name>UTL_DEVICE_STATE_ACTIVE</ns3:Name>
+            <ns3:LocalizedValue>Active</ns3:LocalizedValue>
+        </SourceUtilState>
+        <SourceUtilID>0016161f00000019</SourceUtilID>
+        <SourceType>
+            <Name>EVENT_SRC_TYPE_NIC</Name>
+            <LocalizedValue>NIC</LocalizedValue>
+        </SourceType>
+        <ProxyDeviceType>
+            <ns2:Name>DID_SUBTYPE_I210RD</ns2:Name>
+            <ns2:LocalizedValue>I-210-RD</ns2:LocalizedValue>
+        </ProxyDeviceType>
+        <ProxyUtilID>0016161f00000019</ProxyUtilID>
+        <EmitterId>00:16:16:1f:00:00:00:19</EmitterId>
+        <EmitterName>0016161f00000019</EmitterName>
+        <EmitterType>
+            <Name>EVENT_SRC_TYPE_NIC</Name>
+            <LocalizedValue>NIC</LocalizedValue>
+        </EmitterType>
+        <EventText>Partial voltage condition detected for 3 phase meter, device_type=I-210-RD, starting_time=2023-09-29T16:05:22.000-07:00, device_boot_count=0, event_count=0, seconds_since_boot=0, retry_count=0, voltage_phase_a=1.0 V, voltage_phase_b=1.0 V, voltage_phase_c=1.0 V</EventText>
+        <Template>Partial voltage condition detected for 3 phase meter, device_type={0}, starting_time={1}, device_boot_count={2}, event_count={3}, seconds_since_boot={4}, retry_count={5}, voltage_phase_a={6} V, voltage_phase_b={7} V, voltage_phase_c={8} V</Template>
+        <Parameter Name="DeviceType" Index="0">I-210-RD</Parameter>
+        <Parameter Name="StartTime" Index="1">2023-09-29T23:05:22.000Z</Parameter>
+        <Parameter Name="BootCount" Index="2">0</Parameter>
+        <Parameter Name="EventCount" Index="3">0</Parameter>
+        <Parameter Name="SecondsSinceBoot" Index="4">0</Parameter>
+        <Parameter Name="RetryCount" Index="5">0</Parameter>
+        <Parameter Name="VoltagePhaseA" Index="6">1.0</Parameter>
+        <Parameter Name="VoltagePhaseB" Index="7">1.0</Parameter>
+        <Parameter Name="VoltagePhaseC" Index="8">1.0</Parameter>
+        <Severity>
+            <Name>EVENT_SEVERITY_WARNING</Name>
+            <LocalizedValue>Warning</LocalizedValue>
+        </Severity>
+        <NumOfDaysToKeep>14</NumOfDaysToKeep>
+        <Ack>
+            <Name>EVENT_UNRESOLVED</Name>
+            <LocalizedValue>Unresolved</LocalizedValue>
+        </Ack>
+        <LocationDetails>
+            <LocationId>624</LocationId>
+            <UtilPremiseId>H_00000024R</UtilPremiseId>
+            <LocationType>
+                <ns2:Name>LOCATION_TYPE_PREMISE</ns2:Name>
+                <ns2:LocalizedValue>Premise</ns2:LocalizedValue>
+            </LocationType>
+            <RegionCode>RN</RegionCode>
+            <Address1>1429 KENTFIELD AVE</Address1>
+            <Address2>Addr Line2 24</Address2>
+            <City>REDWOOD CITY</City>
+            <State>CA</State>
+            <PostalCode>94566</PostalCode>
+            <CountryId>840</CountryId>
+            <ServicePointId>180125</ServicePointId>
+            <UtilServicePointId>SPE_0016161f00000019</UtilServicePointId>
+            <AccountId>70125</AccountId>
+            <UtilAccountId>CA_0016161f00000019</UtilAccountId>
+            <Longitude>-122.230655</Longitude>
+            <Latitude>37.467355</Latitude>
+            <SpLongitude>0.0</SpLongitude>
+            <SpLatitude>0.0</SpLatitude>
+            <ServicePointType>E</ServicePointType>
+            <CustomerName>Meter_Cust_Name_24</CustomerName>
+            <DistributionNetworkTransformerID>315790526725</DistributionNetworkTransformerID>
+        </LocationDetails>
+    </Result>
+</FindEventResponse>
+
+
+
+
+*****************************************************************************OUTPUT*******************************************************
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:Message xmlns:ns0="com:ecologicanalytics:UnifiedMessageModel:EndDeviceEventsMessage">
+  <ns1:MessageHeader xmlns:ns1="com:ecologicanalytics:UnifiedMessageModel:OutageMessage">
+    <ns1:Verb>CREATED</ns1:Verb>
+    <ns1:Noun>EndDeviceEvents</ns1:Noun>
+    <ns1:Revision>1.0</ns1:Revision>
+    <ns1:Source>SSN</ns1:Source>
+    <ns1:UserID>SSN</ns1:UserID>
+    <ns1:EventId>300274</ns1:EventId>
+    <ns1:EventLogId>1-122155811</ns1:EventLogId>
+  </ns1:MessageHeader>
+  <ns0:MessagePayload>
+    <ns3:EndDeviceEvent xmlns:ns3="http://iec.ch/TC57/2007/profile#">
+      <ns3:MeterReading>
+        <ns3:endTime>2023-09-29T16:05:22.000-07:00</ns3:endTime>
+        <ns3:startTime>2024-07-01T03:25:57.645-07:00</ns3:startTime>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>0.0</ns3:value>
+          <ns3:ReadingQualities>
+            <ns3:quality>Confirmed</ns3:quality>
+          </ns3:ReadingQualities>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Status</ns3:measTypeCategory>
+            <ns3:name>Energization</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>0</ns3:value>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>RebootCount</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>0</ns3:value>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>SequenceId</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>0</ns3:value>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>RepeatCount</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value/>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>Duration</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>1.0 V</ns3:value>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>Voltage Phase a</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>1.0 V</ns3:value>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>Voltage Phase b</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:Readings>
+          <ns3:timeStamp>2023-09-29T16:05:22.000-07:00</ns3:timeStamp>
+          <ns3:value>1.0 V</ns3:value>
+          <ns3:ReadingTypes>
+            <ns3:measTypeCategory>Count</ns3:measTypeCategory>
+            <ns3:name>Voltage Phase c</ns3:name>
+          </ns3:ReadingTypes>
+        </ns3:Readings>
+        <ns3:ServiceDeliveryPoint>
+          <ns3:aliasName>0016161f00000019</ns3:aliasName>
+          <ns3:name>SPE_0016161f00000019</ns3:name>
+        </ns3:ServiceDeliveryPoint>
+      </ns3:MeterReading>
+    </ns3:EndDeviceEvent>
+  </ns0:MessagePayload>
+</ns0:Message>
+*****************************************************************************DATAWEAVE SCRIPT****************************************************
+%dw 2.0
+output application/xml
+ns ns0 com:ecologicanalytics:UnifiedMessageModel:EndDeviceEventsMessage
+ns ns1 com:ecologicanalytics:UnifiedMessageModel:OutageMessage
+ns ns2 com:ecologicanalytics:UnifiedMessageModel:EndDeviceEvents
+ns ns3 http://iec.ch/TC57/2007/profile#
+---
+{
+  ns0#Message: {
+    ns1#MessageHeader: {
+      ns1#Verb: "CREATED",
+      ns1#Noun: "EndDeviceEvents",
+      ns1#Revision: "1.0",
+      ns1#Source: "SSN",
+      ns1#UserID: "SSN",
+      ns1#EventId: payload.FindEventResponse.Result.EventId,
+      ns1#EventLogId:payload.FindEventResponse.Result.EventLogId
+    },
+    ns0#MessagePayload: {
+        ns3#EndDeviceEvent: {
+          ns3#MeterReading: {
+            ns3#endTime:payload.FindEventResponse.Result.EventText splitBy "," filter ($ contains"starting_time=") map ($splitBy "=")[1],
+            ns3#startTime: now() >> "PST",
+            ns3#Readings: [
+            {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+
+                ns3#value: if((payload.FindEventResponse.Result.EventText splitBy "Fail Reason: ")[1] == "Meter power fail") "2.0" else if ((payload.FindEventResponse.Result.EventText splitBy " Fail Reason: ")[2] == "NIC power fail") "1.0" else "0.0",
+                ns3#ReadingQualities: {
+                  ns3#quality: "Confirmed"
+                },
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Status",
+                  ns3#name: "Energization"
+                }
+              },
+              {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: payload.FindEventResponse.Result.EventText splitBy ", " filter ($ contains "device_boot_count=") map ($ splitBy "=")[1],
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "RebootCount"
+                }
+              },
+              {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: payload.FindEventResponse.Result.EventText splitBy ", " filter ($ contains "event_count=") map ($ splitBy "=")[1] ,
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "SequenceId"
+                }
+              },
+              
+              {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: payload.FindEventResponse.Result.EventText splitBy ", " filter ($ contains "retry_count=") map ($ splitBy "=")[1] ,
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "RepeatCount"
+                }
+                },
+                 {
+                   ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                   ns3#value:{},
+    
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "Duration"
+                }
+                
+              },
+              
+            {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: payload.FindEventResponse.Result.EventText splitBy ", " filter ($ contains "voltage_phase_a=") map ($ splitBy "=")[1] ,
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "Voltage Phase a"
+                }  
+            },
+              
+            {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: payload.FindEventResponse.Result.EventText splitBy ", " filter ($ contains "voltage_phase_b=") map ($ splitBy "=")[1] ,
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "Voltage Phase b"
+                }  
+            },
+              
+            {
+                ns3#timeStamp: payload.FindEventResponse.Result.EventTime.Date,
+                ns3#value: payload.FindEventResponse.Result.EventText splitBy ", " filter ($ contains "voltage_phase_a=") map ($ splitBy "=")[1] ,
+                ns3#ReadingTypes: {
+                  ns3#measTypeCategory: "Count",
+                  ns3#name: "Voltage Phase c"
+                }  
+            },
+            ],
+            
+            ns3#ServiceDeliveryPoint: {
+              ns3#aliasName: payload.FindEventResponse.Result.SourceName,
+              ns3#name: payload.FindEventResponse.Result.LocationDetails.UtilServicePointId,
+       
+              }
+            }
+          }
+        }
+      }
+    }
+  
